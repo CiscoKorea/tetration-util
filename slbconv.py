@@ -9,6 +9,9 @@ slb_conf['configs'] = []
 def conv_to_l4_json( src, dst):
     with open( src, 'r') as inf:
         for line in inf.readlines():
+            if skip_header: # just skip first header row
+                skip_header = False
+                continue
             line = line.strip()
             items = line.split(",")
             name = items[0]
