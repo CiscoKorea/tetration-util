@@ -17,12 +17,13 @@ def conv_to_l4_json( src, dst):
             name = items[0]
             for port in items[2].split():
                 l4_entry = {}
+                l4_entry['protocol'] = 6 # TCP 
                 l4_entry['name'] = name + '-' + port
                 l4_entry['vip'] = items[1]
-                l4_entry['vip_port'] = port
+                l4_entry['vip_port'] = int(port)
                 backends = []
                 for bip in items[3].split():
-                    backends.append( {'backend_ip': bip, 'backend_port': port})
+                    backends.append( {'backend_ip': bip, 'backend_port': int(port)})
                 l4_entry['backends'] = backends
                 slb_conf['configs'].append( l4_entry)
     with open( dst, 'w+') as outf:
