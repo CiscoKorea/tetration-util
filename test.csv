@@ -1,0 +1,7 @@
+IP,VM_NAME,VM_Guest_OS,VM_Host,VM_Datastore,VM_Network,VM_OWNER
+10.66.237.86,apj06-oc02,CentOS 4/5/6/7 (64-bit),dc-esxi-02-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|OpenCart, 김형수
+10.66.237.82,apj06-haproxy01,CentOS 4/5/6/7 (64-bit),dc-esxi-01-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|HA-Proxy, 김형수
+10.66.237.87,apj06-redis01,CentOS 4/5/6/7 (64-bit),dc-esxi-03-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|Redis,김형수
+10.66.237.85,apj06-oc01,CentOS 4/5/6/7 (64-bit),dc-esxi-04-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|OpenCart,김형수
+10.66.237.83,apj06-wp01,CentOS 4/5/6/7 (64-bit),dcucs-12-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|WordPress,김형수
+10.66.237.84,apj06-wp02,CentOS 4/5/6/7 (64-bit),dc-esxi-04-vmw.bne.ciscolabs.com,dc-esxi-datastore01,Tetration-PODs|POD06|WordPress,김형수
