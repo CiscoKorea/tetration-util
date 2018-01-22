@@ -1,0 +1,4 @@
+﻿ip,lifecycle,hostname
+10.253.41.31,prod,internal-was
+60.196.0.15,dev,mobile-dev
+112.171.12.61,prod,customer-web
