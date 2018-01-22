@@ -9,9 +9,8 @@ please check slb_sample.csv format
 ```
 
 # upload korean user annotation to tetration cluster 
-please see test.csv and make sure file as UTF-8 encoding. 
-create all_api.json from API Key creation menu,including user annotation capability
-Update scope name in your case. 
+please prepare your inventory file and make it sure inventory file as UTF-8 encoding. 
+update all_key.json from API Key creation menu ( Gear > Maintenace > API KEYS), including user_data_upload capability
 ```
-#> python userannotation.py 
+#> python userannotation.py -h "https://tetration-cluster-ip-address" -i "utf8_inventory_file" -s "scope_name_for_userannotation"  
 ```
