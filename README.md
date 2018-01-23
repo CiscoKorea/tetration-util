@@ -1,6 +1,10 @@
 # tetration-util
 Utility code for Tetration 
 
+# install required packages
+```
+#> pip install -r requirements.txt
+```
 
 # generating normalized json formatted SLB configuration 
 please check slb_sample.csv format 
