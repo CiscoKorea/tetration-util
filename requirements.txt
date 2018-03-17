@@ -1,2 +1,2 @@
 requests==2.18.4
-tetpyclient==1.0.5
+tetpyclient==1.0.6
