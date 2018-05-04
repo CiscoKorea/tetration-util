@@ -28,3 +28,11 @@ Please see the sample mapping file which named {app-name}_server_list.csv.
 ```
 After above command, app_detail.py will generate {appName}-App-{version}.csv files for related API KEY capability. 
 Just fill out new cluster name with guided ip address and hostname with production environment ( prod or dev)
+
+# update server ports configuration 
+For ADM or to fix flow direction you can use server ports configuration api.
+Please check server_ports_config.json file for payload.
+```
+#> python update_server_port_conf.py -h "https://tetration-cluster-ip-address" -i server_ports_config.json -s root_scope_name  
+```
+You can search fixed flow after server ports configuration uploaded, there no update on history flows only affects new flow generated after related server ports configuration uploaded. 
