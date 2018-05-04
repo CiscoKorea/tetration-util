@@ -1,0 +1,9 @@
+{"host_config": [
+    {"ip_address": "10.66.237.3",
+     "tcp_server_ports": [22,80]
+    },
+    {"ip_address": "10.66.237.4",
+     "tcp_server_ports": [22,80]
+    }
+  ]
+}
