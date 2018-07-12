@@ -23,7 +23,7 @@ def upload_userdata( endpoint, file_path, app_scope):
     # upload user annotation file 
     req_payload = [tetpyclient.MultiPartOption(key='X-Tetration-Oper', val='add')]
     resp = restclient.upload(file_path, '/assets/cmdb/upload/' + app_scope, req_payload)
-    print(resp, resp.text)
+    #print(resp, resp.text)
 
     #file_path = 'output.csv'
     #resp = restclient.download(file_path, '/assets/cmdb/download/' + app_scope)

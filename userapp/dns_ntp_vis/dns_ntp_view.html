@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network Dependency View (NTP/DNS) </title>
+
+  <script type="text/javascript" src="http:///visjs.org/dist/vis.js"></script>
+  <link href="http:///visjs.org/dist/vis.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 900px;
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+ DNS or NTP Dependency diagram 
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'A'},
+    {id: 2, label: 'B'},
+    {id: 3, label: 'C'},
+    {id: 4, label: 'D'}
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+    {from: 1, to: 2, arrows:'to'},
+    {from: 2, to: 3, arrows:{
+      to: {
+        enabled: true,
+        type: 'circle'
+      }
+    }},
+    {from: 3, to: 4, arrows:{
+      to: {
+        enabled: true,
+        type: 'bar'
+      }
+    }},
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = { nodes:
+   [ { id: 1, label: '64.104.123.245' },
+     { id: 2, label: '171.70.168.183' },
+     { id: 3, label: '10.72.86.7' },
+     { id: 4, label: '173.36.224.100' },
+     { id: 5, label: '72.163.4.28' },
+     { id: 6, label: '192.5.5.241' },
+     { id: 7, label: '64.104.200.248' } ],
+  edges:
+   [ { from: 1, to: 2, arrows: 'to' },
+     { from: 3, to: 1, arrows: 'to' },
+     { from: 4, to: 1, arrows: 'to' },
+     { from: 5, to: 4, arrows: 'to' },
+     { from: 6, to: 7, arrows: 'to' } ] }
+
+  var options = {
+/*
+    // Enable this to make the endpoints smaller/larger
+    edges: {
+      arrows: {
+        to: {
+          scaleFactor: 5
+        }
+      }
+    }
+*/
+  };
+
+  var network = new vis.Network(container, data, options);
+</script>
+
+
+</body>
+</html>
