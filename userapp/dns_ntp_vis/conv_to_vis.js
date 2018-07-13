@@ -1,6 +1,8 @@
 var fs = require('fs')
 
-var csv_file='dns.csv'
+var args = process.argv.slice(2)
+var csv_file= args[0]
+var json_file = args[1]
 var dic = {}
 var dic_id = 1
 var resp = {'nodes': [], 'edges': []}
@@ -24,7 +26,8 @@ fs.readFile( csv_file, (err,data) => {
         } else {
             dst_id = dic[ items[1]]
         }
-        resp.edges.push( {from: src_id, to: dst_id, arrow: 'to'})
+        resp.edges.push( {from: src_id, to: dst_id, arrows: 'to'})
     }
-    console.log( resp)
+	fs.writeFileSync( json_file, JSON.stringify(resp))
+    //console.log( resp)
 });
